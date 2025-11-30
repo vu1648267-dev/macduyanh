@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mạc Duy Anh 11A3 Toán</title>
+
+    <style>
+        body { font-family: Arial; margin: 20px; }
+
+        .page { display: none; }
+        .active { display: block; }
+
+        .three-box {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .box {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .box img, .main-img { width: 100%; max-height: 180px; object-fit: cover; }
+        .link { color: blue; cursor: pointer; font-weight: bold; }
+        button { margin-top: 20px; }
+    </style>
+</head>
+
+<body>
+
+<!-- ============================= -->
+<!-- 🔵 CLASH ROYALE -->
+<!-- ============================= -->
+<div id="home" class="page active">
+    <h2>CLASH ROYALE</h2>
+    <p>Phân loại các thẻ bài.</p>
+
+    <img class="main-img" src="01.jpg">
+
+    <div class="three-box">
+        <div class="box">
+            <p class="link" onclick="go('page1')">Binh Lính</p>
+            <img src="02.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('page2')">Thần Chú</p>
+            <img src="03.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('page3')">Công Trình</p>
+            <img src="04.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- 🟣 BINH LÍNH -->
+<!-- ============================= -->
+<div id="page1" class="page">
+    <h2>BINH LÍNH</h2>
+    <p>Là loại thẻ tạo quân đặt ở phần sân của mình.</p>
+
+    <img class="main-img" src="05.jpg">
+
+    <div class="three-box">
+        <div class="box">
+            <p class="link" onclick="go('final1')">Binh Lính Đánh Trụ</p>
+            <img src="06.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final2')">Binh Lính Đánh Người</p>
+            <img src="07.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final3')">Binh Lính Đặc Biệt</p>
+            <img src="08.jpg">
+        </div>
+    </div>
+
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<!-- ============================= -->
+<!-- 🟣 THẦN CHÚ -->
+<!-- ============================= -->
+<div id="page2" class="page">
+    <h2>THẦN CHÚ</h2>
+    <p>Là Loại thẻ có thể đặt được hầu hết tất cả vị trí trên sân.</p>
+
+    <img class="main-img" src="09.jpg">
+
+    <div class="three-box">
+        <div class="box">
+            <p class="link" onclick="go('final4')">Thần Chú Tạo Quân</p>
+            <img src="10.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final5')">Thần Chú Gây Dame</p>
+            <img src="11.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final6')">Thần Chú Đặc Biệt</p>
+            <img src="12.jpg">
+        </div>
+    </div>
+
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<!-- ============================= -->
+<!-- 🟣 CÔNG TRÌNH -->
+<!-- ============================= -->
+<div id="page3" class="page">
+    <h2>CÔNG TRÌNH</h2>
+    <p>Đặt ra trụ để phòng thủ và tấn công.</p>
+
+    <img class="main-img" src="13.jpg">
+
+    <div class="three-box">
+        <div class="box">
+            <p class="link" onclick="go('final7')">Công Trình Tấn Công</p>
+            <img src="14.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final8')">Công Trình Phòng Thủ</p>
+            <img src="15.jpg">
+        </div>
+        <div class="box">
+            <p class="link" onclick="go('final9')">Công Trình Đặc Biệt</p>
+            <img src="16.jpg">
+        </div>
+    </div>
+
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+
+<!-- ============================= -->
+<!-- 🔴 TRANG CUỐI (LEVEL 3) -->
+<!-- ============================= -->
+<div id="final1" class="page">
+    <h2>Binh Lính Đánh Trụ</h2>
+    <p>Là những thẻ bài tạo ra quân binh lính đặt mục tiêu đánh vào công trình đối phương.</p>
+    <img class="main-img" src="17.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final2" class="page">
+    <h2>Binh Lính Đánh Người</h2>
+    <p>Là những thẻ bài tạo ra quân binh lính đặt mục tiêu đánh vào binh lính đối phương.</p>
+    <img class="main-img" src="18.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final3" class="page">
+    <h2>Binh Lính Đặc Biệt</h2>
+    <p>Là những binh lính khác so với loại binh lính đánh người và đánh trụ.</p>
+    <img class="main-img" src="19.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final4" class="page">
+    <h2>Thần Chú Tạo Quân</h2>
+    <p>Là những thần chú tạo ra binh lính.</p>
+    <img class="main-img" src="20.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final5" class="page">
+    <h2>Thần Chú Gây Dame</h2>
+    <p>Là những thần chú tạo ra dame trong 1 vùng diện tích nhất định.</p>
+    <img class="main-img" src="21.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final6" class="page">
+    <h2>Thần Chú Đặc Biệt</h2>
+    <p>Là những thần chú khác so với thần chú tạo quân và thần chú gây dame.</p>
+    <img class="main-img" src="22.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final7" class="page">
+    <h2>Công Trình Tấn Công</h2>
+    <p>Là những công trình có thể gây dame lên trụ đối phương.</p>
+    <img class="main-img" src="23.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final8" class="page">
+    <h2>Công Trình Phòng Thủ</h2>
+    <p>Là những công trình có thể cản binh lính đối phương.</p>
+    <img class="main-img" src="24.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+<div id="final9" class="page">
+    <h2>Công Trình Đặc Biệt</h2>
+    <p>Là những công trình khác so với công trình phòng thủ và công trình tấn công.</p>
+    <img class="main-img" src="25.jpg">
+    <button onclick="back()">⬅ Quay lại</button>
+</div>
+
+
+<!-- ============================= -->
+<!-- 📌 SCRIPT: STACK BACK CHUẨN -->
+<!-- ============================= -->
+<script>
+let pageHistory = ['home']; // Lưu lịch sử các trang
+
+function go(id) {
+    // Ẩn tất cả
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+    // Hiện trang mới
+    document.getElementById(id).classList.add('active');
+
+    // Lưu vào stack lịch sử
+    pageHistory.push(id);
+}
+
+function back() {
+    if (pageHistory.length > 1) {
+        pageHistory.pop(); // bỏ trang hiện tại
+        const prev = pageHistory[pageHistory.length - 1];
+
+        // chuyển về trang trước đó
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(prev).classList.add('active');
+    }
+}
+</script>
+
+</body>
+</html>
